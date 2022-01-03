@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('JiraStatusChange') {
       steps {
-        echo 'echo "test"'
+        echo 'Bees Buzz!'
       }
     }
 
