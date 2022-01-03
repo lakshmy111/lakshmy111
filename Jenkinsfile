@@ -4,9 +4,8 @@ pipeline {
     stage('JiraStatusChange') {
       steps {
         echo 'Bees Buzz!'
-        echo "Database engine is ${defectID}"
-        sh 'printenv'
-        jiraAddComment(idOrKey: 'env.defectID', comment: 'adding comment from pipelint', site: 'JIRA')
+        echo "Issue key is ${defectID}"
+        jiraAddComment(idOrKey: '"${defectID}"', comment: 'adding comment from pipelint', site: 'JIRA')
       }
     }
 
