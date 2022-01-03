@@ -4,7 +4,8 @@ pipeline {
     stage('JiraStatusChange') {
       steps {
         echo 'Bees Buzz!'
-        echo '$defectID'
+        sh '''echo "I am ${defectID}" 
+sh \'./jenkins/build.sh\''''
         jiraAddComment(idOrKey: 'env.defectID', comment: 'adding comment from pipelint', site: 'JIRA')
       }
     }
