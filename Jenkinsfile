@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Bees Buzz!'
         echo "Issue key is ${defectID}"
-        jiraAddComment(idOrKey: '"${defectID}"', comment: 'adding comment from pipelint', site: 'JIRA')
+        jiraAddComment(idOrKey: "${defectID}", comment: 'adding comment from pipelint', site: 'JIRA')
       }
     }
 
