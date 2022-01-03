@@ -4,12 +4,9 @@ pipeline {
     stage('JiraStatusChange') {
       steps {
         echo 'Bees Buzz!'
-        jiraAddComment(idOrKey: 'JiraID', comment: 'adding comment from pipelint', site: 'JIRA')
+        jiraAddComment(idOrKey: 'PRJ-3', comment: 'adding comment from pipelint', site: 'JIRA')
       }
     }
 
-  }
-  environment {
-    JiraID = 'PRJ-3'
   }
 }
